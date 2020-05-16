@@ -1,6 +1,17 @@
 ﻿@page "/"
 
-<h1>¡Bienvenido!</h1>
-<p>
-Para poder administrar tus URLs, por favor iniciar sesión.
-</p>
+
+<AuthorizeView>
+    <Authorized>
+        <h1>¡Bienvenido!</h1>
+        <p>
+        Muchas gracias por autenticarte, ahora puedes usar el botón de <NavLink class="nav-link" href="urls">Administrar URLs</NavLink> para poder comenzar.
+        </p>
+    </Authorized>
+    <NotAuthorized>
+        <h1>¡Bienvenido!</h1>
+        <p>
+        Para poder administrar tus URLs, por favor iniciar sesión.
+        </p>
+    </NotAuthorized>
+</AuthorizeView>

@@ -54,7 +54,7 @@ else
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title">Short Url Request</h3>
+                    <h3 class="modal-title">Nueva URL corta</h3>
                     <!-- Button to close the popup -->
                     <button type="button" class="close"
                             @onclick="ClosePopup">
@@ -62,24 +62,24 @@ else
                     </button>
                 </div>
                 <div class="modal-body">
-                    <label>Title</label>
+                    <label>Título</label>
                     <input class="form-control" type="text"
-                                       placeholder="Title or description for this URL"
+                                       placeholder="Título o descripción de la URL"
                                        @bind="shortUrlRequest.Title" />
                     <br />
-                    <label>The Url to redirect</label>
+                    <label>URL a direccionar</label>
                     <input class="form-control" type="text"
-                                       placeholder="The Url to redirect"
+                                       placeholder="La URL destino"
                                        @bind="shortUrlRequest.Url" />
                     <br />
-                    <label>Vanity</label>
+                    <label>Identificador</label>
                     <input class="form-control" type="text"
-                                       placeholder="Vanity or the 'End' part of the Url"
+                                       placeholder="Código de laparte final del enlace corto"
                                        @bind="shortUrlRequest.Vanity" />
                     <br />
                     <button class="btn btn-primary"
                             @onclick="SaveShortUrl">
-                        Save
+                        Guardar
                     </button>
                 </div>
             </div>
@@ -94,7 +94,7 @@ else
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title">Editar Url Corta</h3>
+                    <h3 class="modal-title">Editar URL corta</h3>
                     <!-- Button to close the popup -->
                     <button type="button" class="close"
                             @onclick="ClosePopup">
