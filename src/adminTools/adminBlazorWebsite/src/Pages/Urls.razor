@@ -19,8 +19,8 @@ else
         <thead>
             <tr>
                 <th></th>
-                <th>Vanity</th>
-                <th>Title</th>
+                <th>Enlace Corto</th>
+                <th>Título</th>
                 <th>Url</th>
                 <th>Clicks</th>
                 <th></th>
@@ -30,7 +30,7 @@ else
             @foreach (var url in UrlList.UrlList)
             {
                 <tr>
-                    <td><button type="button" class="btn btn-outline-primary btn-sm" @onclick="@(() => CopyToClipboardAsync(url.ShortUrl))">Copy</button></td>
+                    <td><button type="button" class="btn btn-outline-primary btn-sm" @onclick="@(() => CopyToClipboardAsync(url.ShortUrl))">Copiar</button></td>
                     <td><a href="@url.ShortUrl" target="blank">@url.RowKey</a></td>
                     <td>
                         <span>@url.Title</span>
@@ -39,7 +39,7 @@ else
                         <span title="@url.Url">@url.GetDisplayableUrl()</span>
                     </td>
                     <td>@url.Clicks</td>
-                    <td><button type="button" class="btn btn-outline-primary btn-sm" @onclick="@(() => EditShortUrl(url))">Edit</button></td>
+                    <td><button type="button" class="btn btn-outline-primary btn-sm" @onclick="@(() => EditShortUrl(url))">Editar</button></td>
                 </tr>
             }
         </tbody>
